@@ -8,21 +8,23 @@
 - [Documentation Tools](#documentation-tools)
 - [Code Quality & Performance](#code-quality--performance)
 - [Built-in Settings](#built-in-settings)
-- [Environment Quick Setup](#environment-quick-setup)
-- [Running & Debugging the application for the first time](#running--debugging-the-application-for-the-first-time)
-- [Available Scripts](#available-scripts)
-- [Running local builds](#running-local-builds)
+- [Development](#development)
+  - [Environment Quick Setup](#environment-quick-setup)
+  - [Running & Debugging the application for the first time](#running--debugging-the-application-for-the-first-time)
+  - [Available Scripts](#available-scripts)
+  - [Running local builds](#running-local-builds)
 - [Project Structure](#project-structure)
-- [File extensions](#file-extensions)
-- [Adding a Stylesheet](#adding-a-stylesheet)
-- [Adding Images and Files](#adding-images-and-files)
+  - [File extensions](#file-extensions)
+  - [Adding a Stylesheet](#adding-a-stylesheet)
+  - [Adding Images and Files](#adding-images-and-files)
 - [Using HTTPS in Local Environment](#using-https-in-local-environment)
 - [Working in StrictMode](#working-in-strictmode)
-- [Updating NPM Dependencies](#updating-npm-dependencies)
-- [Working Guidelines](#working-guidelines)
-- [Troubleshooting](#troubleshooting)
+  - [Updating NPM Dependencies](#updating-npm-dependencies)
+- [Contributing](#contributing)
+  - [Working Guidelines](#working-guidelines)
+  - [Troubleshooting](#troubleshooting)
 - [More Topics](#more-topics)
-- [Documentation & Training](#documentation--training)
+  - [Documentation & Training](#documentation--training)
 - [Creator](#creator)
 - [Copyright and License](#copyright-and-license)
 
@@ -79,7 +81,9 @@ Constant enums and namespaces are not supported, you can learn about the constra
 - [Environment files](https://create-react-app.dev/docs/adding-custom-environment-variables) for `Local`, `Test`,
   `Development`, `QA`, `Staging` and `Production`
 
-## Environment Quick Setup
+## Development
+
+### Environment Quick Setup
 
 1. Install [NodeJs](https://nodejs.org/es/download)
 2. Install [Git](https://git-scm.com/downloads)
@@ -98,7 +102,7 @@ Constant enums and namespaces are not supported, you can learn about the constra
    [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
    for Google Chrome
 
-## Running & Debugging the application for the first time
+### Running & Debugging the application for the first time
 
 1. Open a new [VS Code](https://code.visualstudio.com/download) window:
    - `File` > `New Window`
@@ -123,7 +127,7 @@ Constant enums and namespaces are not supported, you can learn about the constra
    - You can set breakpoints and inspect components in the
      [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
-## Available Scripts
+### Available Scripts
 
 | Command               | Description                                        | Evironment File  |
 | :-------------------- | :------------------------------------------------- | :--------------- |
@@ -148,7 +152,7 @@ Constant enums and namespaces are not supported, you can learn about the constra
 | `npm run sb-build:s`  | Builds Storybook to `out/storybook/staging`        | .env.staging     |
 | `npm run sb-build`    | Builds Storybook to `out/storybook/production`     | .env.production  |
 
-## Running local builds
+### Running local builds
 
 You can run local builds of the Application and Storybook by using
 [http-server](https://github.com/http-party/http-server). The following example creates a local build of the App and
@@ -236,7 +240,7 @@ need to put any TypeScript and SCSS files inside `src`, otherwise webpack won’
 
 Only files inside public can be used from `public/index.html`.
 
-## File extensions
+### File extensions
 
 Most of the files you will create in the `src` folder will be **TypeScript**, **TypeScript with React** or **SASS**:
 
@@ -251,7 +255,7 @@ Most of the files you will create in the `src` folder will be **TypeScript**, **
   - Global styles. e.g. `main.css`
   - Component styles. e.g. `HelloWorld/index.module.scss`
 
-## Adding a Stylesheet
+### Adding a Stylesheet
 
 This project supports [Sass](https://sass-lang.com/guide) alongside
 [CSS Modules](https://github.com/css-modules/css-modules):
@@ -295,7 +299,7 @@ For information about how to structure a SASS codebase using the **7-1 Pattern**
 [article](https://remote.com/blog/how-to-structure-your-sass-project) or take a look to the following
 [boilerplate](https://github.com/KittyGiraudel/sass-boilerplate).
 
-## Adding Images and Files
+### Adding Images and Files
 
 With webpack, using static assets like images and files works similarly to `SCSS`.
 
@@ -355,7 +359,7 @@ To enabble/disable StrictMode you can use the `REACT_APP_STRICT_MODE` environmen
 - `.env.https.local`
 - `.env.local`
 
-## Updating NPM Dependencies
+### Updating NPM Dependencies
 
 [npm-check-updates](https://github.com/raineorshine/npm-check-updates) upgrades your `package.json` dependencies to the
 latest versions, ignoring specified versions. Choose which packages to update in interactive mode:
@@ -421,7 +425,9 @@ Test everything is working fine
 - Build Storybook to **out/storybook/production**: `npm run sb-build`
 - Run the Storybook production build `npx http-server out/storybook/production`
 
-## Working Guidelines
+## Contributing
+
+### Working Guidelines
 
 - Never delete and re-generate the `package-lock.json` file from scratch, it will break the App and Storybook! Let `npm`
   update that file every time you install a new dependency
@@ -494,7 +500,7 @@ Test everything is working fine
 - Add your own environment variables to the `.env-override/.env.local` file, this file should not be commited
 - Before running or building this application always run linters and unit tests
 
-## Troubleshooting
+### Troubleshooting
 
 - **When running `npm run lint` you get this error: "Expected linebreaks to be 'LF' but found 'CRLF'"**
 
@@ -518,7 +524,7 @@ Test everything is working fine
 - [Configuring Supported Browsers](https://create-react-app.dev/docs/supported-browsers-features#configuring-supported-browsers)
 - [Updating React to New Releases](https://create-react-app.dev/docs/updating-to-new-releases)
 
-## Documentation & Training
+### Documentation & Training
 
 - [Official React Documentation](https://es.reactjs.org)
 - [React Function Components](https://www.robinwieruch.de/react-function-component)
