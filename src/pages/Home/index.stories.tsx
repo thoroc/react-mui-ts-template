@@ -1,5 +1,5 @@
 // External imports
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 // Local imports
 import HomePage from '.';
@@ -11,7 +11,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof HomePage>;
+} as Meta<typeof HomePage>;
 
 // Default export
 export const Default = () => <HomePage />;
