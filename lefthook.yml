@@ -1,0 +1,24 @@
+pre-commit:
+  commands:
+    lint-code:
+      glob: '*.{ts,tsx}'
+      interactive: true
+      run: 'npx eslint --fix {staged_files} && git add {staged_files}'
+    format-code:
+      glob: '*.{ts,tsx,yml,yaml,json}'
+      interactive: true
+      run: 'npx prettier --files {staged_files} && git add {staged_files}'
+    format-docs:
+      glob: '*.md'
+      interactive: true
+      run: 'npx prettier --files {staged_files} && git add {staged_files}'
+    lint-docs:
+      glob: '*.md'
+      interactive: true
+      run: 'npx markdownlint-cli2 --fix {staged_files} && git add {staged_files}'
+    markdown-toc:
+      glob: '*.md'
+      run: npx doctoc {staged_files} && git add {staged_files}
+    lint-lockfile:
+      glob: 'package-lock.json'
+      run: 'npx lockfile-lint --validate-https --path'
