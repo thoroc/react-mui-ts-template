@@ -4,25 +4,36 @@
  * Learn more: https://storybook.js.org/docs/react/configure/overview
  */
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)",
-  ],
+  "stories": ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/preset-create-react-app",
+    "@storybook/addon-mdx-gfm",
+    "@chromatic-com/storybook"
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-webpack5",
-    "disableTelemetry": true,
+
+  "framework": {
+    name: "@storybook/react-webpack5",
+    options: {}
   },
+
+  "core": {
+    "disableTelemetry": true
+  },
+
   "webpackFinal": async (config) => {
     injectEnvVariables(config);
     return config;
   },
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript"
+  }
 }
 
 // Manually inject environment variables into the webpack config object.

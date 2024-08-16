@@ -14,8 +14,7 @@ const Template: ComponentStory<typeof HelloWorld> = (args) => <HelloWorld {...ar
 
 // Story #1
 export const Green = Template.bind({});
-Green.args = {
-};
+Green.args = {};
 
 // Story #2
 export const Red = Template.bind({});
