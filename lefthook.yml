@@ -7,11 +7,11 @@ pre-commit:
     format-code:
       glob: '*.{ts,tsx,yml,yaml,json}'
       interactive: true
-      run: 'npx prettier --files {staged_files} && git add {staged_files}'
+      run: 'npx prettier --write {staged_files} && git add {staged_files}'
     format-docs:
       glob: '*.md'
       interactive: true
-      run: 'npx prettier --files {staged_files} && git add {staged_files}'
+      run: 'npx prettier --write {staged_files} && git add {staged_files}'
     lint-docs:
       glob: '*.md'
       interactive: true
